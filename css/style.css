@@ -88,10 +88,20 @@ body{
     display: inline-block;
 }
 #mytask-inbox .approval-buttons .app-button .app-text {
-  display: inline-block;
-  margin: 4px;
-  width: auto;
-  text-align: center;
+    border-right: 1px solid grey;
+    display: inline-block;
+    padding: 4px;
+    text-align: center;
+    width: auto;
+}
+
+#mytask-inbox .approval-buttons .app-button .no-border {
+    border-right: none;
+}
+
+#mytask-inbox .approval-buttons .app-button > span:last-child {
+    padding-left: 3px;
+    padding-right: 7px;
 }
 #mytask-inbox .approval-buttons .app-button .app-icon {
     background: #dcdcdc;
@@ -116,6 +126,34 @@ body{
 }
 #mytask-inbox .approval-buttons.active .app-button.reject .app-icon {
   color: #ED4630;
+}
+
+#mytask-inbox .approval-buttons .app-button.error.active {
+    background: white none repeat scroll 0 0 !important;
+    border: 1px solid red !important;
+}
+#mytask-inbox .approval-buttons .app-button.error.active .app-text {
+    background: red none repeat scroll 0 0;
+    color: white;
+    border-right: none;
+}
+
+#mytask-inbox .approval-buttons .app-button.error.active > span:last-child {
+    color: red;
+}
+
+#mytask-inbox .approval-buttons .app-button.conflict.active {
+    background: white none repeat scroll 0 0 !important;
+    border: 1px solid #e5e5e5 !important;
+}
+#mytask-inbox .approval-buttons .app-button.conflict.active .app-text {
+    background: yellow none repeat scroll 0 0;
+    color: red;
+    border-right: none;
+}
+
+#mytask-inbox .approval-buttons .app-button.conflict.active > span:last-child {
+    color: red;
 }
 /* Checkboxes */
 #mytask-inbox .scheck {
